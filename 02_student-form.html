@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student-Feedback</title>
+    <style>
+      .container {
+        margin: 50px auto;
+        width: 400px;
+        padding: 30px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="submit"],
+      textarea,
+      select {
+        font-size: 12px;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 2px;
+        width: 70%;
+      }
+
+      input[type="submit"] {
+        font-size: 12px;
+        background-color: rgb(204, 222, 216);
+        text-align: center;
+        padding: 10px;
+        width: auto;
+      }
+
+      label {
+        font-size: 14px;
+        margin-top: 10px;
+        display: block;
+      }
+
+      textarea {
+        width: 100%;
+      }
+
+      marquee {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student-Feedback form</h1>
+      <form>
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fullname" placeholder="Your name" />
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          name="emailid"
+          placeholder="Your E-mail id"
+        />
+        <label for="usn">USN:</label>
+        <input type="text" id="usn" name="USN" placeholder="Your USN" />
+        <label for="sem">Select Semester:</label>
+        <select name="sem">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+        <label>Branch:</label>
+        <input type="radio" name="branch" value="CS" />Computer Science and
+        Engineering<br />
+        <input type="radio" name="branch" value="IS" />Information Science<br />
+        <input type="radio" name="branch" value="EC" />Electronics and
+        Communication<br />
+        <input type="radio" name="branch" value="NCB" />Non-Circuit Branch<br />
+        <label for="feedback">Feedback:</label>
+        <textarea
+          rows="6"
+          cols="50"
+          name="feedback"
+          placeholder="Your Feedback & Suggestions"
+        ></textarea>
+        <label for="req">Send me a copy of this Feedback</label><br />
+        <input type="checkbox" name="req" id="req" /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+  <footer>
+    <marquee direction="left"
+      >&copy; JSS Science and Technology University</marquee
+    >
+  </footer>
+</html>
