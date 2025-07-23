@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      .container {
+        margin: 50px auto;
+        width: 400px;
+        padding: 30px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+      }
+
+      input[type="text"],
+      button {
+        font-size: 20px;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 2px;
+      }
+
+      button {
+        font-size: 20px;
+        background-color: rgb(204, 222, 216);
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculator</h1>
+      <label for="input1">Enter the Number-1</label>
+      <input type="text" id="input1" />
+      <br />
+      <label for="input2">Enter the Number-2</label>
+      <input type="text" id="input2" />
+      <br />
+
+      <button onclick="add()">+</button>
+      <button onclick="sub()">-</button>
+      <button onclick="mul()">*</button>
+      <button onclick="div()">/</button>
+      <br />
+      <div id="result" style="font-size: 20px"></div>
+      <br />
+      <button onclick="AC()">AC</button>
+      <button onclick="clearValues()">Clear</button>
+    </div>
+    <script>
+      window.onload = function () {
+        document.getElementById("input1").value = "";
+        document.getElementById("input2").value = "";
+        //whenver you refresh the page the values get erased
+      };
+
+      function add() {
+        let n1 = parseFloat(document.getElementById("input1").value);
+        let n2 = parseFloat(document.getElementById("input2").value);
+        let res = n1 + n2;
+        document.getElementById("result").innerHTML = "Result: " + res;
+      }
+
+      function sub() {
+        let n1 = parseFloat(document.getElementById("input1").value);
+        let n2 = parseFloat(document.getElementById("input2").value);
+        let res = n1 - n2;
+        document.getElementById("result").innerHTML = "Result: " + res;
+      }
+
+      function mul() {
+        let n1 = parseFloat(document.getElementById("input1").value);
+        let n2 = parseFloat(document.getElementById("input2").value);
+        let res = n1 * n2;
+        document.getElementById("result").innerHTML = "Result: " + res;
+      }
+
+      function mul() {
+        let n1 = parseFloat(document.getElementById("input1").value);
+        let n2 = parseFloat(document.getElementById("input2").value);
+        let res = n1 * n2;
+        document.getElementById("result").innerHTML = "Result: " + res;
+      }
+
+      function div() {
+        let n1 = parseFloat(document.getElementById("input1").value);
+        let n2 = parseFloat(document.getElementById("input2").value);
+        if (n2 === 0) {
+          alert("Cannot divide by zero");
+          clearValues();
+          return;
+        }
+        let res = n1 / n2;
+        document.getElementById("result").innerHTML = "Result: " + res;
+      }
+
+      function clearValues() {
+        document.getElementById("input1").value = "";
+        document.getElementById("input2").value = "";
+        document.getElementById("result").innerHTML = "";
+        alert("Cleared All values");
+      }
+
+      function AC() {
+        document.getElementById("input1").value = "";
+        document.getElementById("input2").value = "";
+      }
+    </script>
+  </body>
+</html>
