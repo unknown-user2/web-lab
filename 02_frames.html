@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Frames-Navigation</title>
+</head>
+    <frameset cols="20%,80%">
+        <frame src="left.html" name="left">
+        <frame src="right.html" name="right">
+    </frameset>
+    <noframes>
+      <body>
+        Your Browser is not compatible
+      </body>
+    </noframes>
+</html>
+
+<!-- add the below code in new left.html file -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Links</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #ffffff;
+                margin: 0;
+        padding: 20px;
+      }
+      h2 {
+        color: #333333;
+        font-size: 40px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 2px;
+    }
+    li {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    a {
+        text-decoration: none;
+        color: #0066cc;
+    }
+    </style>
+  </head>
+  <body>
+      <h2>Visit These Sites</h2>
+      <ul>
+          <li>
+              <a href="https://jssstuniv.in/#/" target="right">JSSSTU</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Computer_science" target="right">CSE</a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/" target="right">wikipedia</a>
+            </li>
+        </ul>
+    </body>
+    </html>
+    
+    
+<!-- add the below code in new right.html file -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contents</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 20px;
+      }
+      p {
+        color: #333;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Contents are displayed this side..</p>
+  </body>
+</html>
