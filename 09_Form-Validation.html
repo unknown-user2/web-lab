@@ -102,3 +102,70 @@ iv. E-mail (should not contain invalid addresses) -->
     </script>
   </body>
 </html>
+
+<!-- Without REGEX -->
+
+<!-- <script>
+  function validate() {
+    let userId = document.getElementById("user").value;
+    let name = document.getElementById("name").value;
+    let password = document.getElementById("password").value;
+    let email = document.getElementById("email").value;
+
+    // 1. Validate user ID: length 5 to 12, only alphanumeric
+    if (userId.length < 5 || userId.length > 12) {
+      alert("User ID must be between 5 to 12 characters.");
+      return;
+    }
+    for (let i = 0; i < userId.length; i++) {
+      let ch = userId.charAt(i);
+      if (!((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9'))) {
+        alert("User ID must contain only alphanumeric characters.");
+        return;
+      }
+    }
+
+    // 2. Validate name: only alphabets and spaces, at least 15 characters
+    if (name.length < 15) {
+      alert("Name must be at least 15 characters long.");
+      return;
+    }
+    for (let i = 0; i < name.length; i++) {
+      let ch = name.charAt(i);
+      if (!((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || ch === ' ')) {
+        alert("Name must contain only alphabets and spaces.");
+        return;
+      }
+    }
+
+    // 3. Validate password: at least 8 characters, 1 uppercase, 1 lowercase, 1 digit, 1 special char
+    if (password.length < 8) {
+      alert("Password must be at least 8 characters long.");
+      return;
+    }
+    let hasUpper = false, hasLower = false, hasDigit = false, hasSpecial = false;
+    let specialChars = "@$!%*?&";
+
+    for (let i = 0; i < password.length; i++) {
+      let ch = password.charAt(i);
+      if (ch >= 'A' && ch <= 'Z') hasUpper = true;
+      else if (ch >= 'a' && ch <= 'z') hasLower = true;
+      else if (ch >= '0' && ch <= '9') hasDigit = true;
+      else if (specialChars.includes(ch)) hasSpecial = true;
+    }
+
+    if (!(hasUpper && hasLower && hasDigit && hasSpecial)) {
+      alert("Password must contain uppercase, lowercase, number, and special character.");
+      return;
+    }
+
+    // 4. Validate email: basic checks using string methods
+    if (!email.includes("@") || !email.includes(".") || email.indexOf("@") > email.lastIndexOf(".")) {
+      alert("Invalid email address.");
+      return;
+    }
+
+    alert("Form submitted successfully!");
+  }
+</script>
+ -->
